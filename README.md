@@ -1,4 +1,4 @@
-# OpenStream Music
+# OpenStream Music for the Web
 
 OpenStream Music is a free streaming service designed to provide a seamless music listening experience without any ads, accounts, or paid plans. It aims to bring music lovers together by offering a wide range of songs from various genres, all available at your fingertips.
 
