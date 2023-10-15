@@ -1,43 +1,27 @@
-name: Build Debian
+name: Update and Upload Dependencies
 
 on:
   push:
     branches:
-      - main
+      - main # Change this to your main branch
 
 jobs:
-  build:
+  update-and-upload:
     runs-on: ubuntu-latest
 
-    env:
-      GH_TOKEN: ${{ secrets.GH_TOKEN }}
-
     steps:
-      - name: Checkout code
+      - name: Checkout Code
         uses: actions/checkout@v2
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '16'
-
-      - name: Install dependencies
+      - name: Install Dependencies
         run: |
-          cd desktop/
-          npm install --force --legacy-peer-deps
+          cd desktop
+          npm install
 
-      - name: Install electron-builder
+      - name: Commit and Push Changes
         run: |
-          cd desktop/
-          npm install electron-builder
-
-      - name: Build Deb package
-        run: |
-          cd desktop/
-          npx electron-builder -l deb --x64
-
-      - name: Upload artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: OpenStream-Music-Debian-Intel
-          path: ./desktop/build
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add .
+          git commit -m "Update dependencies"
+          git push
