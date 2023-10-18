@@ -21,7 +21,7 @@ jobs:
       - name: Commit and Push Changes
         run: |
           cd app
-          npm install webpack --save-dev
+          npm install webpack webpack-cli --save-dev
           npx webpack
           
       - uses: actions/upload-artifact@v3
