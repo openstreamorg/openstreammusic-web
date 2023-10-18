@@ -20,6 +20,12 @@ jobs:
 
       - name: Commit and Push Changes
         run: |
+          cd app
           npm install webpack --save-dev
           npx webpack
+          
+      - uses: actions/upload-artifact@v3
+        with:
+          name: openstreammusic-web
+          path: ./app
 
