@@ -23,6 +23,7 @@ jobs:
           cd app
           npm install webpack webpack-cli --save-dev
           npx webpack
+          rm -r node_modules
           
       - uses: actions/upload-artifact@v3
         with:
