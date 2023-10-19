@@ -10,12 +10,15 @@ module.exports = {
             'node_modules': path.join(__dirname, 'node_modules'),
         },
         fallback: {
-            // Use can only include required modules. Also install the package.
-            // for example: npm install --save-dev assert
-            url: require.resolve('url'),
-            fs: require.resolve('fs'),
-            assert: require.resolve('assert'),
-            buffer: require.resolve('buffer')
+            "fs": false,
+            "tls": false,
+            "net": false,
+            "path": false,
+            "zlib": false,
+            "http": false,
+            "https": false,
+            "stream": false,
+            "crypto": false
         }
     }
 };
