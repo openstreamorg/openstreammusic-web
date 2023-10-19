@@ -19,7 +19,7 @@ jobs:
 
       - name: Commit and Push Changes
         run: |
-          npx webpack-cli build
+          npx webpack-cli
           rm -r node_modules
           
       - uses: actions/upload-artifact@v3
