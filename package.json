@@ -1,13 +1,13 @@
 {
-    "name": "openstreammusic",
+    "name": "openstreammusic-web",
     "version": "1.2.0",
     "description": "Freeing the world of freemium streaming services.",
-    "main": "main.js",
+    "private": true,
     "homepage": "https://openstreamorg.github.io",
-    "repository": "https://github.com/openstreamorg/openstreammusic/",
+    "repository": "https://github.com/openstreamorg/openstreammusic-web/",
     "scripts": {
         "start": "electron .",
-        "build": "electron-builder"
+        "build": "webpack"
     },
     "author": "OpenStream <88870951+techguy16@users.noreply.github.com>",
     "license": "GPL-2.0",
@@ -30,6 +30,8 @@
         "electron-builder": "^23.6.0",
         "electron-is-dev": "^2.0.0",
         "node-fetch": "^3.3.1",
+        "webpack": "^5.89.0",
+        "webpack-cli": "^5.1.4",
         "youtube-music-api": "^1.0.6",
         "ytdl-core": "^4.11.5"
     },

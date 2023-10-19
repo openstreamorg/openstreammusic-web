@@ -15,12 +15,10 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          cd app
           npm install
 
       - name: Commit and Push Changes
         run: |
-          cd app
           npm install webpack webpack-cli --save-dev
           npx webpack
           rm -r node_modules
@@ -28,5 +26,5 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: openstreammusic-web
-          path: ./app
+          path: .
 
