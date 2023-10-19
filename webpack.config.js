@@ -8,7 +8,7 @@ module.exports = {
     resolve: {
         alias: {
             'node_modules': path.join(__dirname, 'node_modules'),
-        }
+        },
         fallback: {
             // Use can only include required modules. Also install the package.
             // for example: npm install --save-dev assert
@@ -20,14 +20,7 @@ module.exports = {
             https: require.resolve('https-browserify'),
             os: require.resolve('os-browserify/browser'),
             buffer: require.resolve('buffer'),
-            stream: require.resolve('stream-browserify'),
+            stream: require.resolve('stream-browserify')
         }
-    },
-    plugins: [
-        new webpack.ProvidePlugin({
-            process: 'process/browser',
-            Buffer: ['buffer', 'Buffer'],
-        })
-    ]
-}
+    }
 };
