@@ -19,6 +19,7 @@ jobs:
 
       - name: Commit and Push Changes
         run: |
+          npm install webpack webpack-cli
           npx webpack --config webpack.config.js
           rm -r node_modules
           
