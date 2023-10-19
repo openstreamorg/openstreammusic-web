@@ -15,8 +15,7 @@ module.exports = {
             url: require.resolve('url'),
             fs: require.resolve('fs'),
             assert: require.resolve('assert'),
-            buffer: require.resolve('buffer'),
-            stream: require.resolve('stream-browserify')
+            buffer: require.resolve('buffer')
         }
     }
 };
